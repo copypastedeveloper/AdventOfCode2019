@@ -33,6 +33,12 @@ namespace AdventOfCode
                 }
             }
 
+            Console.WriteLine(new string('-',50));
+            Console.WriteLine("Day 4");
+            Console.WriteLine(new string('-',50));
+            var day4 = new Day4();
+            Console.WriteLine(day4.GetNumberOfPossiblities(153517, 630395));
+
 
 
             Console.ReadLine();
