@@ -6,7 +6,9 @@ namespace AdventOfCode
     {
         public int GetNumberOfPossiblities(int start, int end)
         {
-            return Enumerable.Range(start, end - start).Select(x => x.ToString()).Count(IsPossibility);
+            return Enumerable.Range(start, end - start)
+                        .Select(x => x.ToString())
+                        .Count(IsPossibility);
         }
 
         public bool IsPossibility(string password)
@@ -15,8 +17,8 @@ namespace AdventOfCode
                 return false;
 
             var lookBack = 0;
-            var hasRepeat = false;
             var repeatCount = 0;
+            var hasRepeat = false;
 
             foreach (var number in password)
             {
